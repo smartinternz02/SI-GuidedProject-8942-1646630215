@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body 
+       {
+            border-style:ridge
+       }
+       
+    div.a
+    
+       {
+            float:30px;
+            padding:30px;
+            height:80px;
+            background-color:#e0ebeb
+       }
+       
+    #b {
+            float:right
+       }
+    #c {
+            float:right
+       }
+    #d {
+           float:right
+       }
+    #e {
+           font-size:60%;
+           text-color:blue;
+           font-style: italic
+       }
+    #f {    float:left;
+           font-style:ceviche one
+       }
+    #g {
+           background-color: #4CAF50;
+           border: none;
+           color: white;
+           padding: 15px 32px;
+           text-align: center;
+           text-decoration: none;
+           font-size: 16px;
+           margin: 4px 2px;
+           border-radius: 12px;
+       }
+       
+    input[type=text] 
+       
+       {
+           width: 150%;
+           padding: 12px 20px;
+           margin: 8px 0;
+           display: inline-block;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           box-sizing: border-box;
+       }
+       
+    div.h
+     
+       {
+           border-radius: 5px;
+           background-color:#e0ebeb;
+           padding: 20px;
+  
+       }
+       
+    h3 {
+           text-transform: uppercase;;
+           font-size:200%
+       }
+       
+    div.i
+    
+       {
+           background-color:#a3c2c2
+       }
+    div.j
+       {
+           font-variant: normal;
+           font-size:100%
+       }
+
+    p  {
+           font-variant: small-caps
+       }
+    h2 {
+           font-variant: small-caps;s
+           margin-top:150px;
+           font-size:250%;
+           float:center
+       }
+</style>
+</head>
+
+<body >
+
+<div class="a">
+    <dl id="d">
+      <dt id="e">
+         Build using
+      </dt>
+      <dt>  <a href="https://www.ibm.com">
+              <img id="b"
+                   src="{{url_for('static',filename='ibm_img.png')}}" 
+                   height="40" 
+                   width="40">
+            </a>
+            <a href="https://www.anaconda.com/">
+              <img id="c"
+                   src="{{url_for('static',filename='anaconda-meta_img.jpg')}}" 
+                   height="40"
+                   width="70" >
+            </a>
+     </dt>
+   </dl>
+   <h1 id="f"></h1>
+   <h2 align="center">Welcome to Job Position Prediction Service</h2>
+</div >
+
+  <div class="i" style="text-align:center">
+       <img src="{{url_for('static', filename='1.png')}}"
+            height="400"
+            width="800">
+  </div>
+<div class="h">
+  <div  class="j" 
+        style="width:700px;margin:0 auto;text-align:center;text-style:bold">
+
+    
+        Please Enter The Job Description In The Box Below 
+  </div>
+
+    <form align="center" method="POST">
+        <input type="text"  
+               style="width:600px" 
+               name="text" 
+               placeholder="Ex:skills or description of job" >
+        <br>
+        <input type="submit" id="g">
+    </form>
+
+
+    <p align="center">this job is for:</p>
+    <h3 align="center">{{ text }}</h3>
+</div>
+<div height="80">
+</div>
+</body>
+</html>
